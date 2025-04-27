@@ -34,7 +34,7 @@ export const ChatProvider = ({ children }) => {
     setUser({ id: decoded.id, name: decoded.name });
 
     // connect socket with token in handshake
-    const s = io("http://localhost:8000", {
+    const s = io("http://3.108.51.8:8000", {
       auth: { token: `Bearer ${token}` },
     });
     setSocket(s);

@@ -13,7 +13,7 @@ const ChatList = ({ handleClose }) => {
     const fetchUsers = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:8000/api/chat/users", {
+        const res = await axios.get("http://3.108.51.8:8000/api/chat/users", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUsers(res.data);

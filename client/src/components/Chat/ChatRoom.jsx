@@ -24,7 +24,7 @@ const ChatRoom = ({ handleShow, onBackdrop, offBackdrop }) => {
       try {
         const token = localStorage.getItem("token");
         const res = await axios.get(
-          `http://localhost:8000/api/chat/messages/${selectedUser._id}`,
+          `http://3.108.51.8:8000/api/chat/messages/${selectedUser._id}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }

@@ -41,9 +41,7 @@ const Login = () => {
 
     if (Object.keys(validateValue).length == 0) {
       try {
-        const url = `${
-          import.meta.env.VITE_PUBLIC_BACKEND_URL
-        }/api/auth/signin`;
+        const url = `http://3.108.51.8:8000/api/auth/signin`;
         const response = await fetch(url, {
           method: "POST",
           headers: {
